@@ -28,6 +28,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5c6052d3-a7d6-49de-b697-12e29fca6a72"
+      }
+    },
+    "owner": "alcorbbx"
   }
 }
