@@ -1,13 +1,10 @@
-// import { View, Text } from 'react-native'
-import { Box, Text } from '../atoms'
+import { Text } from '../atoms'
+import Container from '../atoms/container'
 
 export const MainScreen = () => {
   return (
-    // <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    //   <Text>Hello</Text>
-    // </View>
-    <Box>
+    <Container justifyContent="center" alignItems="center">
       <Text>Hello</Text>
-    </Box>
+    </Container>
   )
 }
