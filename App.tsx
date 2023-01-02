@@ -1,14 +1,16 @@
 import { NavigationContainer } from '@react-navigation/native'
-import { View } from 'react-native'
+import { ThemeProvider } from '@shopify/restyle'
+import { StatusBar } from 'react-native'
 import { Navigations } from './app/navs'
+import light from './app/themes/light'
 
 export default function App() {
   return (
     <NavigationContainer>
-      {/* <ThemeProvider></ThemeProvider> */}
-      {/* <View className="flex-1 items-center justify-center bg-white"> */}
+      <ThemeProvider theme={light}>
+        <StatusBar/>
         <Navigations />
-      {/* </View> */}
+      </ThemeProvider>
     </NavigationContainer>
   )
 }

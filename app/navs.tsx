@@ -1,9 +1,11 @@
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { Sidebar } from './components/sidebar'
 import { MainScreen } from './screens/main'
+import { HomeDrawerParamList, RootStackParamList } from './types/nav.types'
 
-const Stack = createNativeStackNavigator()
-const Drawer = createDrawerNavigator()
+const Stack = createNativeStackNavigator<RootStackParamList>()
+const Drawer = createDrawerNavigator<HomeDrawerParamList>()
 
 const Home = () => {
   return (
@@ -13,6 +15,7 @@ const Home = () => {
         drawerType: 'back',
         swipeEdgeWidth: 200
       }}
+      drawerContent={props => <Sidebar {...props} />}
     >
       <Drawer.Screen
         name="Main"
