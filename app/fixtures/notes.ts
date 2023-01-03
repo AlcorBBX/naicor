@@ -1,5 +1,5 @@
 import { LoremIpsum } from 'lorem-ipsum'
-import shortid from 'shortid'
+// import shortid from 'shortid'
 import { Note } from '../types/models.types'
 
 const DATA: Array<Note> = []
@@ -20,7 +20,7 @@ const capitalizeFirstLetter = ([first, ...rest]: string) =>
 
 for (let i = 0; i < 100; ++i) {
   DATA.push({
-    id: shortid.generate(),
+    id: String(Date.now() * Math.random()),
     title: capitalizeFirstLetter(
       lorem.generateWords(Math.round(Math.random() * 10) + 2)
     ),
